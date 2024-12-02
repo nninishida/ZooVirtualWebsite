@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html {
+	scroll-timeline: --page-scroll block;
+    height: 100%;
+}
+
+body {
+    background-color: #f2efeb; /* Cor de fundo padrão */
+    color: rgb(106, 106, 106); /* Cor do texto padrão */
+    transition: background-color 0.3s, color 0.3s; 
+    height: 100%;
+    padding: 10px;
+    padding-top: 100px;
+    margin: 0 15px; /* Margens laterais */
+}
+
+header {
+    position: relative; /* Para posicionar elementos como necessário */
+    justify-content: left;
+}
+
+header .btn {
+    margin: 10px; /* Adiciona um pequeno espaço entre os botões */
+}
+
+h1 {
+    font-family: "Antonio", sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+h4{
+    color: #7ed957;
+}
+
+h5{
+    color: #7ed957;
+}
+
+p {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+button {
+    position: absolute; /* Permite posicionar o botão em relação ao header */
+    right: 20px; /* Distância da borda direita */
+    top: 10px; /* Distância do topo */
+    z-index: 1000; /* Para garantir que o botão esteja acima de outros elementos */
+}
+
+li{
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espaço abaixo da logo */
+}
+
+.logo img {
+    max-height: 70px; /* Limite a altura máxima da logo */
+    width: auto; /* Mantém a proporção */
+}
+
+.header h4 {
+    margin: 10px 0; /* Espaço acima e abaixo do título */
+}
+
+#progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 1em;
+    background: #54d51d;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 1000;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Info box */
+.info-box {
+    border-bottom: 2px solid #ddd;
+    padding: 20px 0;
+    margin: 0 10px;
+}
+
+/* Título de cada seção */
+.title {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #7ed957;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Descrição de cada seção */
+.description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Espaçamento das linhas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.col-md-4, .col-12 {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Centralização */
+.text-center {
+    text-align: center;
+}
+
+/* Margens */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Cartão */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px; /* Adicionado espaço entre os cartões */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título do cartão */
+.card-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #54d51d;
+}
+
+/* Descrição do cartão */
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+    }
+
+    .col-md-4 {
+        width: 100%; /* Faz os cartões ocuparem 100% da largura */
+        margin-bottom: 20px; /* Adiciona espaço entre os cartões */
+    }
+}
+
+/* Menu styles */
+#navbar {
+    background-color: #4caf50; /* Escolha a cor desejada */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o menu esteja acima de outros conteúdos */
+    margin-top: 10px; /* Margem na parte superior, se necessário */
+}
+
+.nav-link {
+    color: white; /* Cor dos links */
+}
+
+.nav-link:hover {
+    color: #d9d9d9; /* Cor ao passar o mouse */
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Bordas completamente arredondadas */
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    background-color: #7ed957; /* Cor do fundo */
+    color: rgb(254, 254, 254); /* Cor do texto */
+    font-size: 24px; /* Tamanho do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+    position: fixed; /* Mantém o botão fixo na tela */
+    right: 10px; /* Distância da borda direita */
+    bottom: 10px; /* Distância da borda inferior */
+}
+
+.btn:hover {
+    background-color: #5cb85c; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+ /* Modo Noturno */
+body.dark-mode {
+    background-color: #121212; /* Cor de fundo para modo noturno */
+    color: #ffffff; /* Cor de texto padrão para modo noturno */
+}
+
+body.dark-mode .description {
+    color: #ffffff; /* Cor do texto para parágrafos de descrição */
+}
+
+body.dark-mode .title {
+    color: #7ed957; /* Cor do título para se destacar no modo noturno */
+}
+
+.dark-mode #navbar {
+    background-color: #343a40; /* Cor da navbar no modo noturno */
+}
+
+.dark-mode .nav-link {
+    color: white; /* Cor dos links no modo noturno */
+}
+
+.dark-mode .nav-link:hover {
+    color: #7ed957; /* Cor ao passar o mouse no modo noturno */
+}
+
+.dark-mode header {
+    background-color: #1a1a1a; /* Cor do cabeçalho no modo noturno */
+}
+
+.dark-mode .card {
+    background-color: #1a1a1a; /* Cor de fundo dos cards no modo noturno */
+    color: white; /* Cor do texto nos cards no modo noturno */
+}
+
+.dark-mode .card .card-title {
+    color: #7ed957; /* Cor do título dos cards no modo noturno */
+}
+
+.dark-mode .card .card-text {
+    color: #ffffff; /* Cor do texto dos cards no modo noturno */
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: white; /* Cor dos títulos no modo noturno */
+}
+
+/* Alinhamento do Menu */
+@media (max-width: 780px) {
+    .navbar {
+        justify-content: flex-start; /* Alinha o menu à esquerda */
+    }
+    .btn{
+        right: 80%;
+    }
+}
+
+@keyframes grow-progress {
+    from { transform: scaleX(0); }
+	to { transform: scaleX(1); }
+}
+
+iframe {
+    display: block;
+    height: 100vh;
+}
